@@ -1,0 +1,25 @@
+{
+  "name": "${componentDowncase}",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/${componentDowncase}.js",
+  "scripts": {
+    "start": "npm run webpack & npm run serve",
+    "webpack": "webpack -w",
+    "serve": "cd example && python -m SimpleHTTPServer",
+    "postinstall": "node_modules/react-tools/bin/jsx src/ dist/ -x jsx --no-cache-dir && cp src/${componentDowncase}.less dist/${componentDowncase}.less"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react-tools": "^0.13.1"
+  },
+  "devDependencies": {
+    "webpack": "^1.5.3",
+    "less": "^2.4.0",
+    "less-loader": "^2.2.0",
+    "style-loader": "^0.11.0",
+    "css-loader": "^0.11.0",
+    "jsx-loader": "^0.12.2"
+  }
+}
